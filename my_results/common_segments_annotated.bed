@@ -1,5 +1,3 @@
-# hgIntegrator: database=hg19 region=genome Tue Mar  8 19:35:24 2022
-#ct_commonsegments_4525.chrom	ct_commonsegments_4525.chromStart	ct_commonsegments_4525.chromEnd	ct_commonsegments_4525.name	ncbiRefSeqSelect.name	ncbiRefSeqSelect.name2
 chr1	11200	11600	E9		
 chr1	104800	105200	E9		
 chr1	369400	369800	E9		
