@@ -1,0 +1,6 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	mainMotif_17bp.meme	YDRCCASYAGRKGGCRS	MEME-1	YDRCCASYAGRKGGCRS	4841	4.08	851	0.72	5.68	14	4.78e-671	-1543.47	4.78e-671	-1543.47	4.78e-671	-1543.47
+
+# SEA (Simple Enrichment Analysis): Version 5.4.1 compiled on Aug 25 2021 at 17:37:48
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc . --thresh 10.0 --align center --p DNaseI_peaks.fasta --m mainMotif_17bp.meme
