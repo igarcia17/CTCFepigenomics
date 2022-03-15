@@ -1,0 +1,30 @@
+Files > Filter by donor > Hyper/ Hypomethylated regions > Dowload BED file
+Uncompress and apply: cut -f 1-3 > selected_columns.bed
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Tool for conversion: Assembly Converter in 
+https://www.ensembl.org/info/docs/tools/index.html
+Conversion from GRCh38/hg38 – GRCh37/hg19
+Homo sapiens
+
+There is also a similar tool in the USCS browser:
+https://genome.ucsc.edu/cgi-bin/hgLiftOver
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Transform the chromosome column:
+See reference: https://github.com/arq5x/bedtools2/issues/628
+awk '{print "chr"$0}' hyper_converted_hg19.bed > hyper_converted_hg19_mod.bed
+awk '{print "chr"$0}' hypo_converted_hg19.bed > hypo_converted_hg19_mod.bed
+
+Final files: hyper_converted_hg19_mod.bed // hypo_converted_hg19_mod.bed
+	* hypo_converted_hg19_mod // Some too short sequences with length < 10: transformation in Python cut_bed_files.ipynb
+	* hyper_converted_hg19_mod // Too lengthy file + Too short sequences: transformation in Python cut_bed_files.ipynb
+-----------------------------------------------------------------------------------------------------------------------------------------
+GALAXY
+FINAL FILES IN FASTA FORMAT FOR SEA:
+	- hypomethylated_fasta.fasta
+	- hypermethylated_fasta.fasta
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Hypomethylated SEA: https://meme-suite.org/meme/info/status?service=SEA&id=appSEA_5.4.11647333221490-239581329
+Hypermethylated SEA: https://meme-suite.org/meme/info/status?service=SEA&id=appSEA_5.4.116473357419041394031097
